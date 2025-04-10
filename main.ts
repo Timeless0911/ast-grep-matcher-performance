@@ -55,7 +55,12 @@ async function runTest(filePath) {
   };
 }
 
-Promise.all([runTest("./file/fast.d.ts"), runTest("./file/slow.d.ts")])
+Promise.all([
+  runTest("./file/less-import-format.d.ts"),
+  runTest("./file/less-import-no-format.d.ts"),
+  runTest("./file/much-import-format.d.ts"),
+  runTest("./file/much-import-no-format.d.ts"),
+])
   .then((results) => {
     results.forEach((result) => {
       console.log(`File: ${result.file}, Time: ${result.time}ms`);
