@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "declaration": true,
-    "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler"
+    "target": "ES2024",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "types": ["node"]
   },
-  "include": ["main.ts"]
+  "include": ["src"]
 }
